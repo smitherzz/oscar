@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="lib/jquery-1.10.2.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <title>oscar</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="start_popup" class="popup">
+            <div class="popup_wrapper">
+
+                <div><h1>oscar</h1></div>
+
+                <h3>color scheme</h3>
+                <ul class="color_scheme">
+                    <li>
+                        <input type="radio" name="color_scheme" value="1" checked>Classic
+                    </li>
+                    <li>
+                        <input type="radio" name="color_scheme" value="2">Neon
+                    </li>
+                    <li>
+                        <input type="radio" name="color_scheme" value="3">Starburst
+                    </li>
+                    <li>
+                        <input type="radio" name="color_scheme" value="4">Emo
+                    </li>
+                </ul>
+                
+                <h3>difficulty</h3>
+                <ul class="difficulty">
+
+                    <li>
+                        <input type="radio" name="difficulty" value="7" data-rate="1" data-diff="slow" checked>Slow
+                    </li>
+                    <li>
+                        <input type="radio" name="difficulty" data-rate="2" value="4" data-diff="quick">Quick
+                    </li>
+                    <li>
+                        <input type="radio" name="difficulty" data-rate="4" value="2" data-diff="ridiculous">Ridiculous
+                    </li>
+
+                </ul>
+
+                <button class"startgame">Start Game</button>
+
+            </div>
+            
+        </div>
+
+        <div id="finish_popup" class="popup">
+            <div class="popup_wrapper">
+                <h1>AMAZING!</h1>
+                <p>You made it <span id="finalRoundCount"></span> rounds at <span id="diff"></span>&nbsp;speed.</p>
+                <p>Your final score is:</p>
+                <h1><span id="finalScore"></span></h1>
+                <p>Oscar thinks you can do better.</p>
+                <p>Wanna play again?</p>
+                <button class="again">Yup</button>
+
+            </div>
+        </div>
+      
+        <div id="game_board">
+
+            <div id="game_wrapper">
+                <div class="wedge firstWedge" data-piece="1"></div>
+                <div class="wedge secondWedge" data-piece="2"></div>
+                <div class="wedge thirdWedge" data-piece="3"></div>
+                <div class="wedge fourthWedge" data-piece="4"></div>
+            </div>
+
+            <div class="center_wrapper">
+
+                <div class="center_circle"></div>
+                <div class="logo"><h1>oscar</h1></div>
+                <div class="score"><h2>Score: <span id="scoreDisplay">0</span></h2></div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
