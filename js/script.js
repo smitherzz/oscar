@@ -38,8 +38,6 @@ var colorSchemeGenerate = function() {
 }
 
 var start = function() {
-    var audio = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_01.mp");
-    audio.play();
     $('.wedge').css("opacity", "60%");
     this.score = 0;
     $('#scoreDisplay').text(this.score);
@@ -109,17 +107,17 @@ Game.prototype.wedgeEventHandler = function(wedgeToPlay) {
     switch(wedgeToPlay) {
         case 1:
             $('.firstWedge').animate({ opacity: 1 }, 100);
-            playSound('../sounds/sounds_01.mp3');
+            playSound('../oscar/sounds/sounds_01.mp3');
             $('.firstWedge').animate({ opacity: .5 }, 100);
             break;
         case 2:
             $('.secondWedge').animate({ opacity: 1 }, 100);
-            playSound('../sounds/sounds_02.mp3');
+            playSound('../oscar/sounds/sounds_02.mp3');
             $('.secondWedge').animate({ opacity: .5 }, 100);
             break;
         case 3:
             $('.thirdWedge').animate({ opacity: 1 }, 100);
-            playSound('../sounds/sounds_03.mp3');
+            playSound('../oscar/sounds/sounds_03.mp3');
             $('.thirdWedge').animate({ opacity: .5 }, 100);
             break;
         case 4:
