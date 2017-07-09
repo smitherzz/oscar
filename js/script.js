@@ -38,6 +38,8 @@ var colorSchemeGenerate = function() {
 }
 
 var start = function() {
+    var audio = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_01.mp");
+    audio.play();
     $('.wedge').css("opacity", "60%");
     this.score = 0;
     $('#scoreDisplay').text(this.score);
