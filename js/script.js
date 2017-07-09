@@ -6,6 +6,12 @@ var Game = function () {
     this.scoreRate = $('input[name=difficulty]:checked').data('rate');
 }
 
+//For audio to play in browsers other than Chrome
+var audio1 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_01.mp3");
+var audio2 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_02.mp3");
+var audio3 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_03.mp3");
+var audio4 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_04.mp3");
+
 var colorSchemeGenerate = function() {
     var colorScheme = $('input[name=color_scheme]:checked').val();
 
@@ -38,8 +44,6 @@ var colorSchemeGenerate = function() {
 }
 
 var start = function() {
-    var audio = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_01.mp3");
-    audio.play();
     $('.wedge').css("opacity", "60%");
     this.score = 0;
     $('#scoreDisplay').text(this.score);
@@ -60,7 +64,7 @@ var restart = function() {
     $('button').click(start);
 }
 
-
+/*
 var playSound = function(file) {
     var embed = document.createElement("embed");
  
@@ -70,6 +74,7 @@ var playSound = function(file) {
  
     document.body.appendChild(embed);
 }
+*/
 
 
 Game.prototype.newRound = function() {
@@ -109,22 +114,22 @@ Game.prototype.wedgeEventHandler = function(wedgeToPlay) {
     switch(wedgeToPlay) {
         case 1:
             $('.firstWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/mp3/sounds_01.mp3');
+            audio1.play();
             $('.firstWedge').animate({ opacity: .5 }, 100);
             break;
         case 2:
             $('.secondWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/mp3/sounds_02.mp3');
+            audio2.play();
             $('.secondWedge').animate({ opacity: .5 }, 100);
             break;
         case 3:
             $('.thirdWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/mp3/sounds_03.mp3');
+            audio3.play();
             $('.thirdWedge').animate({ opacity: .5 }, 100);
             break;
         case 4:
             $('.fourthWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/mp3/sounds_04.mp3');
+            audio4.play();
             $('.fourthWedge').animate({ opacity: .5 }, 100);
             break;
     }
