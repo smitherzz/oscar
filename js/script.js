@@ -186,8 +186,12 @@ Game.prototype.keepScore =  function() {
 
 
 $(document).ready(function() {
-    $('.color_scheme').click(colorSchemeGenerate);
-    $('button').click(start);
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        console.log('this working?');
+    } else {
+        $('.color_scheme').click(colorSchemeGenerate);
+        $('button').click(start);
+    }
 }); 
 
 
