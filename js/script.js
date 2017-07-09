@@ -6,12 +6,6 @@ var Game = function () {
     this.scoreRate = $('input[name=difficulty]:checked').data('rate');
 }
 
-//For audio to play in browsers other than Chrome
-var audio1 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_01.mp3");
-var audio2 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_02.mp3");
-var audio3 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_03.mp3");
-var audio4 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_04.mp3");
-
 var colorSchemeGenerate = function() {
     var colorScheme = $('input[name=color_scheme]:checked').val();
 
@@ -44,6 +38,10 @@ var colorSchemeGenerate = function() {
 }
 
 var start = function() {
+    this.audio1 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_01.mp3");
+    this.audio2 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_02.mp3");
+    this.audio3 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_03.mp3");
+    this.audio4 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_04.mp3");
     $('.wedge').css("opacity", "60%");
     this.score = 0;
     $('#scoreDisplay').text(this.score);
