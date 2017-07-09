@@ -1,3 +1,3 @@
 Simon game by the name of Oscar
 
-Works best on desktop. Not mobile optimized just yet :/
+Works best on desktop in Chrome or Firefox. Not mobile optimized just yet :/
