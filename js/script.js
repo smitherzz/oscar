@@ -112,17 +112,17 @@ Game.prototype.wedgeEventHandler = function(wedgeToPlay) {
             break;
         case 2:
             $('.secondWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/mp3/sounds_02.mp3');
+            playSound('http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_02.mp3'');
             $('.secondWedge').animate({ opacity: .5 }, 100);
             break;
         case 3:
             $('.thirdWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/mp3/sounds_03.mp3');
+            playSound('http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_03.mp3'');
             $('.thirdWedge').animate({ opacity: .5 }, 100);
             break;
         case 4:
             $('.fourthWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/mp3/sounds_04.mp3');
+            playSound('http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_04.mp3'');
             $('.fourthWedge').animate({ opacity: .5 }, 100);
             break;
     }
