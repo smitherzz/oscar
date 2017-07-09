@@ -107,22 +107,22 @@ Game.prototype.wedgeEventHandler = function(wedgeToPlay) {
     switch(wedgeToPlay) {
         case 1:
             $('.firstWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/sounds_01.mp3');
+            playSound('../oscar/sounds/ogg/sounds_01.ogg');
             $('.firstWedge').animate({ opacity: .5 }, 100);
             break;
         case 2:
             $('.secondWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/sounds_02.mp3');
+            playSound('../oscar/sounds/ogg/sounds_02.ogg');
             $('.secondWedge').animate({ opacity: .5 }, 100);
             break;
         case 3:
             $('.thirdWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/sounds_03.mp3');
+            playSound('../oscar/sounds/ogg/sounds_03.ogg');
             $('.thirdWedge').animate({ opacity: .5 }, 100);
             break;
         case 4:
             $('.fourthWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/sounds_04.mp3');
+            playSound('../oscar/sounds/ogg/sounds_04.ogg');
             $('.fourthWedge').animate({ opacity: .5 }, 100);
             break;
     }
