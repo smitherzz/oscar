@@ -107,7 +107,7 @@ Game.prototype.wedgeEventHandler = function(wedgeToPlay) {
     switch(wedgeToPlay) {
         case 1:
             $('.firstWedge').animate({ opacity: 1 }, 100);
-            playSound('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3);
+            playSound('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
             $('.firstWedge').animate({ opacity: .5 }, 100);
             break;
         case 2:
