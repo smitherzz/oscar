@@ -107,7 +107,7 @@ Game.prototype.wedgeEventHandler = function(wedgeToPlay) {
     switch(wedgeToPlay) {
         case 1:
             $('.firstWedge').animate({ opacity: 1 }, 100);
-            playSound('../oscar/sounds/mp3/sounds_01.mp3');
+            playSound('http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_01.mp3');
             $('.firstWedge').animate({ opacity: .5 }, 100);
             break;
         case 2:
