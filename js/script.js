@@ -37,10 +37,10 @@ var colorSchemeGenerate = function() {
     }
 }
 
-var audio1 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_01.mp3");
-var audio2 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_02.mp3");
-var audio3 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_03.mp3");
-var audio4 = new Audio("http://www.styleschematic.com/wp-content/uploads/2017/07/sounds_04.mp3");
+var audio1 = new Audio("../oscar/sounds/mp3/sounds_01.mp3");
+var audio2 = new Audio("../oscar/sounds/mp3/sounds_02.mp3");
+var audio3 = new Audio("../oscar/sounds/mp3/sounds_03.mp3");
+var audio4 = new Audio("../oscar/sounds/mp3/sounds_04.mp3");
 
 var start = function() {
     $('.wedge').css("opacity", "60%");
@@ -113,21 +113,25 @@ Game.prototype.wedgeEventHandler = function(wedgeToPlay) {
     switch(wedgeToPlay) {
         case 1:
             $('.firstWedge').animate({ opacity: 1 }, 100);
+            audio1.pause();
             audio1.play();
             $('.firstWedge').animate({ opacity: .5 }, 100);
             break;
         case 2:
             $('.secondWedge').animate({ opacity: 1 }, 100);
+            audio2.pause();
             audio2.play();
             $('.secondWedge').animate({ opacity: .5 }, 100);
             break;
         case 3:
             $('.thirdWedge').animate({ opacity: 1 }, 100);
+            audio3.pause();
             audio3.play();
             $('.thirdWedge').animate({ opacity: .5 }, 100);
             break;
         case 4:
             $('.fourthWedge').animate({ opacity: 1 }, 100);
+            audio4.pause();
             audio4.play();
             $('.fourthWedge').animate({ opacity: .5 }, 100);
             break;
