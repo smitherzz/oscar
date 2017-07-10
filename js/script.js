@@ -133,7 +133,7 @@ Game.prototype.listenToUserPlay = function(counter) {
         if (userWedgeSelect === that.computerPlay[turnCounter]) {
             that.keepScore();
             turnCounter++;
-
+            
             if (turnCounter < that.round) {
                 $( '.wedge' ).unbind( 'click' );
                 that.listenToUserPlay(turnCounter);
@@ -141,16 +141,14 @@ Game.prototype.listenToUserPlay = function(counter) {
                 that.round++;
                 setTimeout(function() {that.newRound()}, 1000);
             }
-
+            
         } else {
             $( '.wedge' ).unbind( 'click' );
             setTimeout(function() {that.wrongAnswer(turnCounter)}, 700);
         }
 
     })
-
 };
-
 
 Game.prototype.wrongAnswer = function(correctAnswer) {
     var that = this;
@@ -165,8 +163,6 @@ Game.prototype.wrongAnswer = function(correctAnswer) {
     setTimeout(function() {$('#finish_popup').fadeIn("slow")}, 1000);
 };
 
-
-
 Game.prototype.keepScore =  function() {
     var number = this.score;
     var newScore = number + this.scoreRate;
@@ -175,12 +171,7 @@ Game.prototype.keepScore =  function() {
     $('#scoreDisplay').text(this.score);
 };
 
-
-
-
 $(document).ready(function() {
     $('.color_scheme').click(colorSchemeGenerate);
     $('button').click(start);
 }); 
-
-
