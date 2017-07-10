@@ -112,22 +112,22 @@ Game.prototype.wedgeEventHandler = function(wedgeToPlay) {
     switch(wedgeToPlay) {
         case 1:
             $('.firstWedge').animate({ opacity: 1 }, 100);
-            audio1.play();
+            this.audio1.play();
             $('.firstWedge').animate({ opacity: .5 }, 100);
             break;
         case 2:
             $('.secondWedge').animate({ opacity: 1 }, 100);
-            audio2.play();
+            this.audio2.play();
             $('.secondWedge').animate({ opacity: .5 }, 100);
             break;
         case 3:
             $('.thirdWedge').animate({ opacity: 1 }, 100);
-            audio3.play();
+            this.audio3.play();
             $('.thirdWedge').animate({ opacity: .5 }, 100);
             break;
         case 4:
             $('.fourthWedge').animate({ opacity: 1 }, 100);
-            audio4.play();
+            this.audio4.play();
             $('.fourthWedge').animate({ opacity: .5 }, 100);
             break;
     }
