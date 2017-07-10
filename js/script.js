@@ -37,10 +37,10 @@ var colorSchemeGenerate = function() {
     }
 }
 
-var audio1 = new Audio("../oscar/sounds/mp3/sounds_01.mp3");
-var audio2 = new Audio("../oscar/sounds/mp3/sounds_02.mp3");
-var audio3 = new Audio("../oscar/sounds/mp3/sounds_03.mp3");
-var audio4 = new Audio("../oscar/sounds/mp3/sounds_04.mp3");
+var audio1 = new Audio("../oscar/sounds/mp3/sound_01.mp3");
+var audio2 = new Audio("../oscar/sounds/mp3/sound_02.mp3");
+var audio3 = new Audio("../oscar/sounds/mp3/sound_03.mp3");
+var audio4 = new Audio("../oscar/sounds/mp3/sound_04.mp3");
 
 var start = function() {
     $('.wedge').css("opacity", "60%");
@@ -62,19 +62,6 @@ var restart = function() {
     $('#start_popup').fadeIn("slow");
     $('button').click(start);
 }
-
-/*
-var playSound = function(file) {
-    var embed = document.createElement("embed");
- 
-    embed.setAttribute('src', file);
-    embed.setAttribute('hidden', true);
-    embed.setAttribute('autostart', true);
- 
-    document.body.appendChild(embed);
-}
-*/
-
 
 Game.prototype.newRound = function() {
     $('.wedge').unbind('click');
@@ -113,25 +100,21 @@ Game.prototype.wedgeEventHandler = function(wedgeToPlay) {
     switch(wedgeToPlay) {
         case 1:
             $('.firstWedge').animate({ opacity: 1 }, 100);
-            audio1.pause();
             audio1.play();
             $('.firstWedge').animate({ opacity: .5 }, 100);
             break;
         case 2:
             $('.secondWedge').animate({ opacity: 1 }, 100);
-            audio2.pause();
             audio2.play();
             $('.secondWedge').animate({ opacity: .5 }, 100);
             break;
         case 3:
             $('.thirdWedge').animate({ opacity: 1 }, 100);
-            audio3.pause();
             audio3.play();
             $('.thirdWedge').animate({ opacity: .5 }, 100);
             break;
         case 4:
             $('.fourthWedge').animate({ opacity: 1 }, 100);
-            audio4.pause();
             audio4.play();
             $('.fourthWedge').animate({ opacity: .5 }, 100);
             break;
